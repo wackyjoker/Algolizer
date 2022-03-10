@@ -1,0 +1,96 @@
+.header {
+    height: 100vh;
+    width: calc(200px + 10rem);
+    position: fixed;
+    z-index: 2;
+    color: papayawhip;
+    border-right: 2px solid rgb(41, 50, 53);
+    margin-left: 0;
+    transition: ease-in 0.5s width;
+    background: var(--header-bg-color);
+  }
+  .header.active {
+    width: 0;
+    transition: ease-out 0.2s width;
+    border: none;
+  }
+  .nav {
+    font-size: calc(16px + 1rem);
+    padding: 0;
+  }
+  .title__bar {
+    line-height: 1.2;
+    padding: 1em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .title__bar.active {
+    position: static;
+  }
+  .title__bar h2 {
+    overflow: hidden;
+  }
+  .title__icon {
+    cursor: pointer;
+    border-radius: 25%;
+    position: absolute;
+    font-size: calc(32px + 2rem);
+    right: 1rem;
+    transition: ease-in 0.5s transform, linear 300ms background;
+  }
+  .title__icon.active {
+    z-index: 3;
+    background: var(--header-bg-color);
+    left: 1rem;
+    transform: rotate(180deg);
+    transition: ease-out 0.5s transform, linear 300ms color;
+  }
+  .title__icon:hover {
+    background-color: var(--header-item-color--hovered);
+    color: var(--header-text-color--hovered);
+  }
+  .nav ul {
+    padding-right: 2rem;
+  }
+  
+  .list-item__container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .list-item__container a {
+    overflow: hidden;
+  }
+  .list-item__link {
+    color: var(--font-color);
+  }
+  .list-item__link--selected {
+    color: var(--header-text-color--hovered);
+  }
+  .list-item__link > div {
+    white-space: nowrap;
+    padding: 0.8em;
+    border-radius: 2rem;
+    transition-property: background, color;
+    transition: ease-out 300ms;
+  }
+  .list-item__link > div:hover {
+    background-color: var(--header-item-color--hovered);
+    color: var(--header-text-color--hovered);
+  }
+  .nav ul li svg {
+    vertical-align: text-bottom;
+  }
+  .nav ul li span {
+    flex: 0 3 auto;
+    margin-left: 1em;
+    height: 1.5em;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  
+  @media only screen and (max-width: 468px) {
+    .toggle__bar {
+      position: static;
+    }
+  }
