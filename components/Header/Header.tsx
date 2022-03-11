@@ -9,7 +9,9 @@ import styles from './Header.module.scss'
 const Header: React.FC = () => {
   const [toggled, setToggled] = useState<Boolean>(false)
   const folding = () => setToggled((prevState) => !prevState)
-  const { asPath } = useRouter()
+  
+//   const isActive  = useRouter().pathname === href
+  
   useEffect(() => {
     if (window.matchMedia('(max-width: 500px)').matches) folding()
   }, [])
@@ -30,16 +32,18 @@ const Header: React.FC = () => {
             <li className={styles['list-item__container']} key={items.name}>
               <Link
                 href={items.path}
-                className={({ isActive }) => cn(
+
+              >
+                <a className={ 
                   styles['list-item__link'],
                   { [styles['list-item__link--selected']]: isActive },
                 )}
-                passHref
-              >
-                <div role="listitem">
-                  {items.icon}
-                  <span>{items.title}</span>
-                </div>
+                >
+                  <div role="listitem">
+                    {items.icon}
+                    <span>{items.title}</span>
+                  </div>
+                </a>
               </Link>
             </li>
           ))}
