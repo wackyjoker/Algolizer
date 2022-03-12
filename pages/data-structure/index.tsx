@@ -1,11 +1,11 @@
 import Header from '@/components/Header'
 import { FC } from 'react'
 
-const Sort: FC = () => (
+const DataStructure: FC = () => (
   <>
     <Header />
-    this is Sort Algorithm page
+    this is DS page
   </>
 )
 
-export default Sort
+export default DataStructure

@@ -8,62 +8,69 @@
     margin-left: 0;
     transition: ease-in 0.5s width;
     background: var(--header-bg-color);
+    &.active {
+      width: 0;
+      transition: ease-out 0.2s width;
+      border: none;
+    }
   }
-  .header.active {
-    width: 0;
-    transition: ease-out 0.2s width;
-    border: none;
-  }
+ 
   .nav {
     font-size: calc(16px + 1rem);
     padding: 0;
+    ul li svg {
+      vertical-align: text-bottom;
+    }
   }
-  .title__bar {
+  .title {
     line-height: 1.2;
     padding: 1em;
     position: relative;
     display: flex;
     justify-content: center;
+    h2 {
+      overflow: hidden;
+    }
+    &.active {
+      position: static;
+    }
+    &__icon {
+      cursor: pointer;
+      border-radius: 25%;
+      position: absolute;
+      font-size: calc(32px + 2rem);
+      right: 1rem;
+      transition: ease-in 0.5s transform, linear 300ms background;
+      &.active {
+        z-index: 3;
+        background: var(--header-bg-color);
+        left: 1rem;
+        transform: rotate(180deg);
+        transition: ease-out 0.5s transform, linear 300ms color;
+      }
+      &:hover {
+        background-color: var(--header-item-color--hovered);
+        color: var(--header-text-color--hovered);
+      }
+    }
   }
-  .title__bar.active {
-    position: static;
-  }
-  .title__bar h2 {
-    overflow: hidden;
-  }
-  .title__icon {
-    cursor: pointer;
-    border-radius: 25%;
-    position: absolute;
-    font-size: calc(32px + 2rem);
-    right: 1rem;
-    transition: ease-in 0.5s transform, linear 300ms background;
-  }
-  .title__icon.active {
-    z-index: 3;
-    background: var(--header-bg-color);
-    left: 1rem;
-    transform: rotate(180deg);
-    transition: ease-out 0.5s transform, linear 300ms color;
-  }
-  .title__icon:hover {
-    background-color: var(--header-item-color--hovered);
-    color: var(--header-text-color--hovered);
-  }
-  .nav ul {
+ 
+  .list {
     padding-right: 2rem;
+    .list-item{
+      &__container {
+        display: flex;
+        justify-content: flex-start;
+        a {
+           overflow: hidden;
+        }
+      }
+      &__link {
+        color: var(--font-color);
+      }
+    }
   }
   
-  .list-item__container {
-    display: flex;
-    justify-content: flex-start;
-  }
-  .list-item__container a {
-    overflow: hidden;
-  }
-  .list-item__link {
-    color: var(--font-color);
-  }
   .list-item__link--selected {
     color: var(--header-text-color--hovered);
   }
@@ -78,9 +85,7 @@
     background-color: var(--header-item-color--hovered);
     color: var(--header-text-color--hovered);
   }
-  .nav ul li svg {
-    vertical-align: text-bottom;
-  }
+
   .nav ul li span {
     flex: 0 3 auto;
     margin-left: 1em;
