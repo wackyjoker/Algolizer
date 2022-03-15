@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
-import { FC } from 'react'
+import type { NextPage } from 'next'
 
-const Sort: FC = () => (
+const Sort:NextPage = () => (
   <>
     <Header />
     this is Sort Algorithm page

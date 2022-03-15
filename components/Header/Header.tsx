@@ -17,7 +17,9 @@ const Header: React.FC = () => {
     <header className={cn(styles.header, { [ styles.active ]: toggled })} role="banner">
       <nav role="navigation" className={styles.nav}>
         <div className={cn(styles.title, { [ styles.active ]: toggled })}>
-          <h2>Menu</h2>
+          <NextLink href="/" passHref>
+            <a><h2>Menu</h2></a>
+          </NextLink>
           <AiOutlineMenuFold
             className={cn(styles.title__icon, { [ styles.active ]: toggled })}
             onClick={folding}
@@ -48,7 +50,6 @@ const Header: React.FC = () => {
               </li>
             )
           })}
-
         </ul>
       </nav>
     </header>

@@ -1,3 +1,5 @@
+@import "@/styles/_variables.scss";
+
 .header {
     height: 100vh;
     width: calc(200px + 10rem);
@@ -50,7 +52,7 @@
       }
       &:hover {
         background-color: var(--header-item-color--hovered);
-        color: var(--header-text-color--hovered);
+        color: $header-text-color-selected;
       }
     }
   }
@@ -66,13 +68,12 @@
         }
       }
       &__link {
-        color: var(--font-color);
+        color: $header-text-color
+        &--selected {
+          color: $header-text-color-selected
+        }
       }
     }
-  }
-  
-  .list-item__link--selected {
-    color: var(--header-text-color--hovered);
   }
   .list-item__link > div {
     white-space: nowrap;
