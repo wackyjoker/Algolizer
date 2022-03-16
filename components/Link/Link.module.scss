@@ -1,0 +1,28 @@
+@import "@/styles/_variables.scss";
+.list-item{
+    &__container {
+      display: flex;
+      justify-content: flex-start;
+      a {
+         overflow: hidden;
+      }
+    }
+    &__link {
+      color: $header-text-color
+
+    }
+    &__link--selected {
+      color: $header-text-color-interacted
+    }
+  }
+.list-item__link > div {
+  white-space: nowrap;
+  padding: 0.5em;
+  border-radius: 2rem;
+  transition-property: background, color;
+  transition: ease-out 300ms;
+  &:hover{
+      background-color: $header-link-bg-hovered;
+      color: $header-text-color-interacted;
+  }
+}

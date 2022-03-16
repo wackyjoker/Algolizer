@@ -3,6 +3,7 @@ import cn from 'classnames'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import { AiOutlineMenuFold } from 'react-icons/ai'
+import Link from '@/components/Link'
 import icons, { IconProps } from './iconData'
 import styles from './Header.module.scss'
 
@@ -31,23 +32,7 @@ const Header: React.FC = () => {
           {icons.map((items:IconProps):React.ReactElement => {
             const isActive = pathname === items.path
             return (
-              <li className={styles[ 'list-item__container' ]} key={items.name}>
-                <NextLink
-                  href={items.path}
-                  key={items.name}
-                >
-                  <a className={cn(
-                    styles[ 'list-item__link' ],
-                    { [ styles[ 'list-item__link--selected' ] ]: isActive },
-                  )}
-                  >
-                    <div role="listitem">
-                      {items.icon}
-                      <span>{items.title}</span>
-                    </div>
-                  </a>
-                </NextLink>
-              </li>
+              <Link items={items} isActive={isActive} key={items.name} />
             )
           })}
         </ul>
