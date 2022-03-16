@@ -5,11 +5,11 @@
     width: calc(200px + 10rem);
     position: fixed;
     z-index: 2;
-    color: papayawhip;
+    color: $header-text-color;
     border-right: 2px solid rgb(41, 50, 53);
     margin-left: 0;
     transition: ease-in 0.5s width;
-    background: var(--header-bg-color);
+    background: $header-bg-color;
     &.active {
       width: 0;
       transition: ease-out 0.2s width;
@@ -30,7 +30,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    h2 {
+    a{
       overflow: hidden;
     }
     &.active {
@@ -51,8 +51,8 @@
         transition: ease-out 0.5s transform, linear 300ms color;
       }
       &:hover {
-        background-color: var(--header-item-color--hovered);
-        color: $header-text-color-selected;
+        background-color: tomato;
+        color: $header-text-color-interacted;
       }
     }
   }
@@ -70,7 +70,7 @@
       &__link {
         color: $header-text-color
         &--selected {
-          color: $header-text-color-selected
+          color: $header-text-color-interacted
         }
       }
     }
