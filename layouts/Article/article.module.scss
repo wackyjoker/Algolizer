@@ -1,6 +1,9 @@
-.main {
-    color: papayawhip;
+@import "@/styles/_variables.scss";
+
+.article {
+    color: $header-text-color;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     overflow: hidden;
     z-index: 0;

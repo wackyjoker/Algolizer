@@ -51,7 +51,7 @@
         transition: ease-out 0.5s transform, linear 300ms color;
       }
       &:hover {
-        background-color: tomato;
+        background-color: $header-link-bg-hovered;
         color: $header-text-color-interacted;
       }
     }
@@ -69,22 +69,23 @@
       }
       &__link {
         color: $header-text-color
-        &--selected {
-          color: $header-text-color-interacted
-        }
+
+      }
+      &__link--selected {
+        color: $header-text-color-interacted
       }
     }
   }
   .list-item__link > div {
     white-space: nowrap;
-    padding: 0.8em;
+    padding: 0.5em;
     border-radius: 2rem;
     transition-property: background, color;
     transition: ease-out 300ms;
-  }
-  .list-item__link > div:hover {
-    background-color: var(--header-item-color--hovered);
-    color: var(--header-text-color--hovered);
+    &:hover{
+        background-color: $header-link-bg-hovered;
+        color: $header-text-color-interacted;
+    }
   }
 
   .nav ul li span {
