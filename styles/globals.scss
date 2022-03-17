@@ -10,7 +10,11 @@ body {
     text-align: start;
     font-size: 1vw;
 }
-
+.button{
+  appearance: none;
+  cursor: pointer;
+  background:none;
+}
 a {
   color: inherit;
   text-decoration: none;

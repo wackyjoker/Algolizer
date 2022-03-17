@@ -21,12 +21,16 @@ const Header: React.FC = () => {
           <NextLink href="/" passHref>
             <a><h2>Menu</h2></a>
           </NextLink>
-          <AiOutlineMenuFold
-            className={cn(styles.title__icon, { [ styles.active ]: toggled })}
+          <button
+            type="button"
+            className={cn(styles.title__button, { [ styles.active ]: toggled })}
             onClick={folding}
-            role="presentation"
             aria-label="fold"
-          />
+          >
+            <AiOutlineMenuFold
+              className={cn(styles.title__icon, { [ styles.active ]: toggled })}
+            />
+          </button>
         </div>
         <ul aria-labelledby="navigation" className={styles.list}>
           {icons.map((items:IconProps):React.ReactElement => {

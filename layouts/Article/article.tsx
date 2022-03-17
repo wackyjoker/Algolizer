@@ -2,9 +2,9 @@ import type { FC } from 'react'
 import styles from './article.module.scss'
 
 const Article: FC = ({ children }) => (
-  <div className={styles.article}>
+  <article className={styles.article}>
     {children}
-  </div>
+  </article>
 )
 
 export default Article

@@ -8,17 +8,18 @@
       }
     }
     &__link {
-      color: $header-text-color
-
+      color: $header-text-color;
     }
     &__link--selected {
-      color: $header-text-color-interacted
+      color: $header-text-color-interacted;
+      font-weight:bold;
+      border-radius: 10px;
     }
   }
 .list-item__link > div {
   white-space: nowrap;
   padding: 0.5em;
-  border-radius: 2rem;
+  border-radius: 10px;
   transition-property: background, color;
   transition: ease-out 300ms;
   &:hover{
