@@ -46,9 +46,14 @@
       display:inline-flex;
       transition: linear 300ms;
       top:3px;
+      border-radius:10px;
       &.active{
         transform:translateX(-4rem);
       }
+      &:hover{
+        background-color: $header-link-bg-hovered;
+        color: $header-text-color-hovered;
+    }
     }
     &__icon {
       cursor: pointer;
