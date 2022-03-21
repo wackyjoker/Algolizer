@@ -33,7 +33,6 @@ module.exports = {
     'max-len': [ 'error', { code: 100, tabWidth: 2 } ],
     'no-console': [ 'error', { allow: [ '' ] } ],
     indent: [ 'error', 2 ],
-    'no-tabs': 'error',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     'react/react-in-jsx-scope': 'off',
