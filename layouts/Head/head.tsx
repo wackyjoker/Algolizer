@@ -2,8 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 
 export interface Props extends React.DetailedHTMLProps
-<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    title?: string;
+  <React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  title?: string;
 }
 
 const Layout: React.FC<Props> = ({
