@@ -23,7 +23,7 @@ module.exports = {
   rules: {
     'object-curly-spacing': [ 'error', 'always' ],
     'array-bracket-spacing': [ 'error', 'always' ],
-    'computed-property-spacing': [ 'error', 'always' ],
+    'computed-property-spacing': [ 'error', 'never' ],
     'react/function-component-definition': [ 2, { namedComponents: 'arrow-function' } ],
     'react/require-default-props': 'off',
     'no-var': 'warn',
